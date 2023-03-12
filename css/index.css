@@ -1,0 +1,38 @@
+/* .index-flex-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+.index-page-container{
+    text-align: center;
+    margin-top: 10%;
+}
+
+/* .index-input-container{
+    text-align: center;
+} 
+
+.index-intro-text{
+    text-align: center;
+}
+
+*/
+
+
+.index-input-gp-code{
+    display: block;
+    margin: auto;
+    margin-bottom: 1%;
+} 
+
+.index-input-submit{
+    background-color: aqua;
+    padding: 1%;
+}
+
+@media screen and (max-width: 540px){
+	.index-page-container{
+        margin-top: 90%;
+    }
+}
