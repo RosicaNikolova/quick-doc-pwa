@@ -14,8 +14,13 @@ body{
 .home-backbutton{
     background: none;
     border: none;
+    padding: 0;
 }
 
 .article-img{
+    width: 100%;
+}
+
+.article-go-back-button{
     
 }
