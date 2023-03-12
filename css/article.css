@@ -1,0 +1,21 @@
+body{
+    background-color: #F5F5F5;
+}
+
+.article-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-logo-icon{
+    padding: 2%;
+}
+
+.home-backbutton{
+    background: none;
+    border: none;
+}
+
+.article-img{
+    
+}
