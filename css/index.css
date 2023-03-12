@@ -1,23 +1,11 @@
-/* .index-flex-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-} */
 
+body{
+    background-color: #F5F5F5;
+}
 .index-page-container{
     text-align: center;
     margin-top: 10%;
 }
-
-/* .index-input-container{
-    text-align: center;
-} 
-
-.index-intro-text{
-    text-align: center;
-}
-
-*/
 
 
 .index-input-gp-code{
