@@ -9,14 +9,14 @@ body{
 
 .finish-message-box{
     width: 85%;
-    height: 15vh;
     background-color: #F0F9FF;
     margin: 50px auto 25px;
     border-radius: 20px;
 }
 .finish-message-text{
     font-size: 20px;
-    padding-top: 25px;    
+    padding-top: 25px;   
+    margin: 5%; 
 }
 .home-time-text{
     font-size: 32px;
@@ -32,4 +32,16 @@ body{
     border-radius: 20px;
     border: none;
     font-size: 20px;
+}
+
+.
+
+.finish-rating-button{
+    height: 50px;
+    width: 50px;
+}
+
+.finish-rating-icon{
+    font-size: 30px;
+    color: red;
 }
