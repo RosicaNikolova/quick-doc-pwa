@@ -12,6 +12,7 @@ body{
     background-color: #F0F9FF;
     margin: 50px auto 25px;
     border-radius: 20px;
+    padding: 3%;
 }
 .finish-message-text{
     font-size: 20px;
@@ -34,14 +35,37 @@ body{
     font-size: 20px;
 }
 
-.
+
 
 .finish-rating-button{
     height: 50px;
     width: 50px;
 }
 
-.finish-rating-icon{
+.finish-rating-icon-big-smiley, .finish-rating-icon-smiley, .finish-rating-icon-meh, .finish-rating-icon-sad, .finish-rating-icon-very-sad {
     font-size: 30px;
-    color: red;
+    /* //color: red; */
 }
+
+.finish-rating-icon-big-smiley{
+    color: #3DAE76;
+}
+
+.finish-rating-icon-smiley{
+    color: #73C462;
+}
+
+.finish-rating-icon-meh{
+    color: #EAA540;
+}
+
+.finish-rating-icon-sad{
+    color: #E85744;
+}
+
+.finish-rating-icon-very-sad{
+    color: #ED1E24;
+}
+
+
+
