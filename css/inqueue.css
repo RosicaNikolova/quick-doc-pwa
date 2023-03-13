@@ -66,3 +66,59 @@ body{
     margin-top: 12px;
     margin-bottom: 12px;
 }
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container {
+    width: 80%;
+    height: 27vh;
+    background-color: orange;
+    margin: auto;
+}
+
+/* progress indcicator */
+.circle-container {
+    width: 175px;
+    height: 175px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden; 
+    z-index: 1;
+}
+.semicircle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+.semicircle:nth-child(1) {
+    background-color: red;
+    z-index: 2;
+}
+.semicircle:nth-child(2) {
+    background-color: blue;
+    z-index: 3;
+}
+.semicircle:nth-child(3) {
+    background-color: white;
+    z-index: 4;
+    display: none;
+}
+.outhermost-circle {
+    width: 166px;
+    height: 166px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* hover -for testing only */
+.main-container:hover .semicircle:nth-child(1){
+    transform: rotate(180deg);
+    transition: 1s linear;
+}
