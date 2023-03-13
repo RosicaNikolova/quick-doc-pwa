@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/finish.css">
     <script src="https://kit.fontawesome.com/46a7b54c45.js" crossorigin="anonymous"></script>
+    <script src="./js/finish.js"></script>
 </head>
 <body>
 
@@ -16,22 +17,22 @@
     <div class="finish-message-box">
         <h3 class="finish-message-text">Could you tell us about your experience</h3>
         <div class="finish-rating-box">
-            <git class="finish-rating-button">
-                <i class="fa-regular fa-face-grin-wide finish-rating-icon-big-smiley"></i>
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-grin-wide finish-rating-icon-big-smiley" id="icon-1"></i>
             </button>
-            <button class="finish-rating-button">
-                <i class="fa-regular fa-face-smile finish-rating-icon-smiley"></i>
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-smile finish-rating-icon-smiley" id="icon-2"></i>
             </button>
-            <button class="finish-rating-button">
-                <i class="fa-regular fa-face-meh finish-rating-icon-meh"></i>
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-meh finish-rating-icon-meh" id="icon-3"></i>
             </button>
 
-            <button class="finish-rating-button">
-                <i class="fa-regular fa-face-frown finish-rating-icon-sad"></i>
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-frown finish-rating-icon-sad" id="icon-4"></i>
             </button>
            
-            <button class="finish-rating-button">
-                <i class="fa-regular fa-face-frown-open finish-rating-icon-very-sad"></i>
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-frown-open finish-rating-icon-very-sad" id="icon-5"></i>
             </button>
 
         </div>
