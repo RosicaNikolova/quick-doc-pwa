@@ -66,6 +66,10 @@ body{
     margin-top: 12px;
     margin-bottom: 12px;
 }
+.inqueue-note{
+    color: gray;
+    text-align: center;
+}
 .center{
     display: flex;
     justify-content: center;
@@ -73,9 +77,9 @@ body{
 }
 .main-container {
     width: 80%;
-    height: 27vh;
-    background-color: orange;
-    margin: auto;
+    height: 25vh;
+    background-color: transparent;
+    margin: 30px auto auto;
 }
 
 /* progress indcicator */
@@ -97,28 +101,57 @@ body{
     transform-origin: right center;
 }
 .semicircle:nth-child(1) {
-    background-color: red;
+    background-color: #0957DE;
     z-index: 2;
 }
 .semicircle:nth-child(2) {
-    background-color: blue;
+    background-color: #0957DE;
     z-index: 3;
 }
 .semicircle:nth-child(3) {
     background-color: white;
     z-index: 4;
-    display: none;
 }
 .outhermost-circle {
     width: 166px;
     height: 166px;
-    background-color: black;
+    background-color: #D7EFFF;
     border-radius: 50%;
     z-index: 5;
 }
 
-/* hover -for testing only */
-.main-container:hover .semicircle:nth-child(1){
-    transform: rotate(180deg);
-    transition: 1s linear;
+/* timer */
+.time-container {
+    width: 160px;
+    height: 100px;
+    z-index: 6;
+    flex-wrap: wrap;
+}
+.timer {
+    width: 125px;
+    height: 50px;
+    z-index: 7;
+    flex-wrap: wrap;
+}
+.timer div {
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+}
+.timer .colon {
+    background-color: transparent;
+    width: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 8px;
+}
+.text-center{
+    text-align: center;
+    margin: auto;
 }
