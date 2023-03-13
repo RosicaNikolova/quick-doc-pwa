@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/inqueue.css">
+    <title>Waiting in queue</title>
 </head>
 <body>
-    
-</body>
+    <div class="inqueue-herobox">
+        <div class="inqueue-heroblurimage"></div>
+        <div class="inqueue-heroglass"></div>
+        <a href="./home.html">
+            <button class="inqueue-backbutton">
+                <img src="./images/back-icon.svg" alt="back button">
+            </button>
+        </a>
+        <div class="main-container center">
+            <!-- progress indicator -->
+            <div class="circle-container center">
+                <div class="semicircle"></div>
+                <div class="semicircle"></div>
+                <div class="semicircle"></div>
+                <div class="outhermost-circle"></div>
+            </div>
+
+            <!-- timer -->
+            <div class="timer-container center">
+                <div class="timer center"></div>
+            </div>
+        </div>
+        <p class="inqueue-note">*Estimated time</p>
+    </div>
+    <div class="inqueue-article">
+        <img class="inqueue-article-image" src="./images/background1.png" alt="article-image">
+        <div class="inqueue-tag">
+            <p>Did you know?</p>
+        </div>
+        <h2>Did you know? Laughing is good for the heart and can increase blood flow by 20 percent.</h2>
+    </div>
+    <script src="./js/timer.js"></script>
+</body> 
 </html>

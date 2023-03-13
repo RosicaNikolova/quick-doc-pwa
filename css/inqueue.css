@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #D7EFFF;
+}
+.inqueue-herobox{
+    width: 100%;
+    margin-top: -20px;
+    height: 30vh;
+}
+.inqueue-heroblurimage{
+    background-image: url(/images/background1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 34vh;
+    margin-top: -20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+.inqueue-heroglass{
+    width: 100%;
+    margin-top: -20px;
+    height: 34vh;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+.inqueue-backbutton{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: none;
+    border: none;
+}
+.inqueue-article{
+    width: 85%;
+    min-height: 35vh;
+    padding: 7.5%;
+    margin-top: 35px;
+    border-bottom: solid 1px gray;
+}
+.inqueue-article-image{
+    width: 100%;
+    height: 24vh;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.inqueue-tag{
+    background-color: #F0F9FF;
+    padding: 5px;
+    width: 120px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.inqueue-note{
+    color: gray;
+    text-align: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container {
+    width: 80%;
+    height: 25vh;
+    background-color: transparent;
+    margin: 30px auto auto;
+}
+
+/* progress indcicator */
+.circle-container {
+    width: 175px;
+    height: 175px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden; 
+    z-index: 1;
+}
+.semicircle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+.semicircle:nth-child(1) {
+    background-color: #0957DE;
+    z-index: 2;
+}
+.semicircle:nth-child(2) {
+    background-color: #0957DE;
+    z-index: 3;
+}
+.semicircle:nth-child(3) {
+    background-color: white;
+    z-index: 4;
+}
+.outhermost-circle {
+    width: 166px;
+    height: 166px;
+    background-color: #D7EFFF;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* timer */
+.time-container {
+    width: 160px;
+    height: 100px;
+    z-index: 6;
+    flex-wrap: wrap;
+}
+.timer {
+    width: 125px;
+    height: 50px;
+    z-index: 7;
+    flex-wrap: wrap;
+}
+.timer div {
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+}
+.timer .colon {
+    background-color: transparent;
+    width: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 8px;
+}
+.text-center{
+    text-align: center;
+    margin: auto;
+}
