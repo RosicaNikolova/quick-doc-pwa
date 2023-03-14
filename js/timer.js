@@ -3,23 +3,22 @@ const semicircles = document.querySelectorAll(".semicircle");
 const timer = document.querySelector('.timer');
 
 //input
-const hr = 0;
-const min = 0;
-const sec = 0;
+let hr = 0;
+let min = 0;
+let sec = 3;
 
-const hours = hr * 36000000;
-const minutes = min * 60000;
-const seconds = sec * 1000;
-const setTime = hours + minutes + seconds;
-const startTime  = Date.now();
-const futureTime = startTime + setTime;
-
-const timerLoop = setInterval(countDownTimer);
+let hours = hr * 36000000;
+let minutes = min * 60000;
+let seconds = sec * 1000;
+let setTime = hours + minutes + seconds;
+let startTime  = Date.now();
+let futureTime = startTime + setTime;
+let timerLoop = setInterval(countDownTimer);
 countDownTimer();
 
 function countDownTimer() {
-    const currentTime = Date.now();
-    const remainingTime = futureTime - currentTime;
+    let currentTime = Date.now();
+    let remainingTime = futureTime - currentTime;
     const angle = (remainingTime / setTime) * 360;
 
     //progress indicator
@@ -34,9 +33,9 @@ function countDownTimer() {
     }
 
     //timer
-    const hrs = Math.floor((remainingTime / (1000 * 60 * 60)) % 24).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
-    const mins = Math.floor((remainingTime / (1000 * 60)) % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
-    const secs = Math.floor((remainingTime / 1000) % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+    let hrs = Math.floor((remainingTime / (1000 * 60 * 60)) % 24).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+    let mins = Math.floor((remainingTime / (1000 * 60)) % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+    let secs = Math.floor((remainingTime / 1000) % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
 
     timer.innerHTML = `
     <div class="text-center">${mins}</div>
@@ -44,12 +43,7 @@ function countDownTimer() {
     <div class="text-center">${secs}</div>
     <p class="inqueue-minutes">Minutes left</p>
     `;
-
-
-    //5sec-condition
-
-
-
+    
     //end
     if(remainingTime < 0) {
         clearInterval(timerLoop);
@@ -63,5 +57,33 @@ function countDownTimer() {
         <div class="text-center">00</div>
         <p class="inqueue-minutes">Minutes left</p>
         `;
+
+        //alert
+        document.getElementById("alert").innerHTML += `
+        <div class="alert-background">
+            <div class="alert-box">
+                <h2>Hey, the estimated time ran out have you been invited to your GP’s cabinet?</h2>
+                <div class="alert-buttons">
+                    <a href="./finish.html" class="alert-link">
+                    <button class="alert-yes">Yes</button>
+                    </a>
+                    <button class="alert-no" onclick="addTime()">No</button>
+                </div>
+            </div>
+        </div>
+        `;
     }
+}
+
+function addTime(){
+    min = 5;
+    sec = 0;
+    minutes = min * 60000;
+    seconds = sec * 1000;
+    setTime = hours + minutes + seconds;
+    startTime = Date.now();
+    futureTime = startTime + setTime;
+    timerLoop = setInterval(countDownTimer);
+    document.getElementById("alert").innerHTML = ""
+    countDownTimer();
 }
