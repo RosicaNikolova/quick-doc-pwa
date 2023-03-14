@@ -6,7 +6,8 @@ body{
 }
 
 .logo{
-    margin:1%;
+    margin-top: 7.5%;
+    margin-left: 7.5%;
 }
 .index-page-container{
     text-align: center;
@@ -15,18 +16,26 @@ body{
 
 .index-intro-text{
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .index-input-gp-code{
     display: block;
     margin: auto;
     margin-bottom: 1%;
-    width: 230px;
+    width: 210px;
     height: 60px;
     border-radius: 20px;
     box-shadow: 0px 0px 32px 3px rgba(9, 87, 222, 0.2);
+    border: none;
+    font-size: large;
+    padding-left: 10%;
+    padding-right: 10%;
 } 
+
+.index-input-gp-code:focus{
+    outline: none;
+}
 
 
 .index-submit-btn{
@@ -41,8 +50,17 @@ body{
     font-size: 20px;
 }
 
+.error-message{
+    font-size: 20px;
+}
+
 @media screen and (min-width: 540px){
 	 .index-page-container{
         margin-top: 10%;
     } 
+
+    .logo{
+        margin-top: 2%;
+        margin-left: 2%;
+    }
 }
