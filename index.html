@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
 
 </head>
 <body>
@@ -14,11 +15,14 @@
     </div>
     <div class="index-page-container">
         <p class="index-intro-text">Enter your GP’s code</p>
-        <input class="index-input-gp-code" type="text"> <br>
-      
-        <a href="home.html">
-            <button class="index-submit-btn">Enter</button>
-        </a>
+        <form id = "myForm" onsubmit="submitForm(event)">
+            <input id="code-entered" class="index-input-gp-code" type="text" required> <br>
+            <p id="error-message"></p>
+            <!-- <a href="home.html"> -->
+                <button class="index-submit-btn" type="submit">
+                    Enter</button>
+            <!-- </a> -->
+        </form>
     </div>
    
 </body>
