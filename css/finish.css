@@ -75,3 +75,20 @@ body{
 
 
 
+@media screen and (min-width: 768px){
+    .finish-message-box{
+        width: 50%;
+    }
+
+    .finish-message-text{
+        font-size: 30px;
+    }
+    .home-button-join{
+        margin-bottom: 10%;
+    }
+
+    .finish-rating-icon-big-smiley, .finish-rating-icon-smiley, .finish-rating-icon-meh, .finish-rating-icon-sad, .finish-rating-icon-very-sad {
+        font-size: 40px;
+    }
+  
+}
