@@ -70,6 +70,10 @@ body{
     color: gray;
     text-align: center;
 }
+.inqueue-link{
+    text-decoration: none;
+    color: black;
+}
 .center{
     display: flex;
     justify-content: center;
