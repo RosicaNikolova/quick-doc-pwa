@@ -13,14 +13,14 @@ function onIconClick(event){
     let icons = document.querySelectorAll('i');
    // console.log(icons[1]);
     value = event.target.id;
-    index = 0;
     icons.forEach(element => {
         if(element.id != value){
-            console.log(element);
+            console.log(value);
             element.style.color = "grey";
+            
         }
         if(element.id === value){
-            element.style.color = "green";
+            element.style.color = "#0957DE";
         }
     });
 }
