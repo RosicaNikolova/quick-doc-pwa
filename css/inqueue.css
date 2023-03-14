@@ -31,7 +31,7 @@ body{
     backdrop-filter: blur( 8px );
     -webkit-backdrop-filter: blur( 8px );
     border-radius: 20px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
     position: absolute;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@ body{
 }
 .inqueue-article-image{
     width: 100%;
-    height: 24vh;
+    height: auto;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -69,6 +69,10 @@ body{
 .inqueue-note{
     color: gray;
     text-align: center;
+}
+.inqueue-link{
+    text-decoration: none;
+    color: black;
 }
 .center{
     display: flex;
@@ -154,4 +158,12 @@ body{
 .text-center{
     text-align: center;
     margin: auto;
+}
+
+@media screen and (min-width: 768px){
+    .inqueue-article-container{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
