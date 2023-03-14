@@ -1,17 +1,26 @@
 
 body{
     background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
 }
 .index-page-container{
     text-align: center;
-    margin-top: 10%;
+    margin-top: 50%;
 }
 
+.index-intro-text{
+    font-weight: 600;
+    font-size: 32px;
+}
 
 .index-input-gp-code{
     display: block;
     margin: auto;
     margin-bottom: 1%;
+    width: 290px;
+    height: 105px;
+    border-radius: 20px;
 } 
 
 .index-input-submit{
@@ -19,7 +28,7 @@ body{
     padding: 1%;
 }
 
-@media screen and (max-width: 540px){
+@media screen and (min-width: 540px){
 	.index-page-container{
         margin-top: 90%;
     }
