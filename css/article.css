@@ -90,6 +90,66 @@ body{
     text-decoration: none;
     color: black;
 }
+/* Alert box */
+.alert-background{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.397);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert-box{
+    min-height: 250;
+    width: 85%;
+    background-color: #D7EFFF;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+}
+.alert-box h2{
+    padding: 7.5%;
+}
+.alert-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.alert-yes {
+    border: none;
+    color: white;
+    background-color: #0957DE;
+    border-radius: 20px;
+    width: 40%;
+    height: 45px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.alert-no {
+    border: none;
+    color: #0957DE;
+    background-color: white;
+    border-radius: 20px;
+    width: 40%;
+    height: 45px;
+    font-weight: 600;
+    margin-right: 7.5%;
+    margin-bottom: 7.5%;
+}
+.alert-link{
+    border: none;
+    color: white;
+    background-color: #0957DE;
+    border-radius: 20px;
+    width: 40%;
+    height: 45px;
+    font-weight: 600;
+    margin-left: 7.5%;
+    margin-bottom: 7.5%;
+}
 
 @media screen and (min-width: 768px){
 	.article-body-container{
