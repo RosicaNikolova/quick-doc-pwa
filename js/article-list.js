@@ -1,6 +1,14 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+console.log(id)
+
 for (let i = 0; i < 5; i++) {
-    getArticles(i);
-    document.querySelector(".inqueue-article-container").innerHTML += `
+    if(id == i){
+        console.log("skip current article");
+    }else{
+  getArticles(i);
+  document.querySelector(".inqueue-article-container").innerHTML += `
     <a class="inqueue-link" href="article.html?id=${i}">
     <div class="inqueue-article">
         <img class="inqueue-article-image" id="img${i}"src="./images/background1.png" alt="article-image">
@@ -11,15 +19,31 @@ for (let i = 0; i < 5; i++) {
     </div>
     </a>
     `;
+    }
 }
 
+function getArticles(number) {
+  fetch("./article.json")
+    .then((res) => res.json())
+    .then((data) => {
+      document.getElementById(`img${number}`).src = data.articles[number].image;
+      document.getElementById(`tag${number}`).innerHTML =
+        data.articles[number].tag;
+      document.getElementById(`title${number}`).innerHTML =
+        data.articles[number].title;
+    });
+}
 
-function getArticles(number){
-    fetch("./article.json")
-      .then((res) => res.json())
-      .then((data) => {
-        document.getElementById(`img${number}`).src = data.articles[number].image;
-        document.getElementById(`tag${number}`).innerHTML = data.articles[number].tag;
-        document.getElementById(`title${number}`).innerHTML = data.articles[number].title;
-      });
+getCurrentArticles(id);
+
+function getCurrentArticles(number) {
+  fetch("./article.json")
+    .then((res) => res.json())
+    .then((data) => {
+      document.getElementById("article-img").src = data.articles[number].image;
+      document.getElementById("article-title").innerHTML =
+        data.articles[number].title;
+      document.getElementById("article-text").innerHTML =
+        data.articles[number].text;
+    });
 }
