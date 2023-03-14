@@ -1,13 +1,4 @@
 
-const colorsForIcons = {
-    icon1: "#3DAE76",
-    icon2: "#73C462",
-    icon3: "#EAA540",
-    icon4: "#E85744",
-    icon5: "#ED1E24"
-}
-
-
 function onIconClick(event){
     //console.log(event.target.id);
     let icons = document.querySelectorAll('i');
