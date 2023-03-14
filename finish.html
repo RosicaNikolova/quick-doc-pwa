@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/finish.css">
+    <script src="https://kit.fontawesome.com/46a7b54c45.js" crossorigin="anonymous"></script>
+    <script src="./js/finish.js"></script>
 </head>
 <body>
+
+    <div class="finish-message-box">
+        <p class="finish-message-text">We hope we made your wait more pleasant</p>
+    </div>
+    <div class="finish-message-box">
+        <h3 class="finish-message-text">Could you tell us about your experience</h3>
+        <div class="finish-rating-box">
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-grin-wide finish-rating-icon-big-smiley" id="icon1"></i>
+            </button>
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-smile finish-rating-icon-smiley" id="icon2"></i>
+            </button>
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-meh finish-rating-icon-meh" id="icon3"></i>
+            </button>
+
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-frown finish-rating-icon-sad" id="icon4"></i>
+            </button>
+           
+            <button class="finish-rating-button" onclick="onIconClick(event)">
+                <i class="fa-regular fa-face-frown-open finish-rating-icon-very-sad" id="icon5"></i>
+            </button>
+
+        </div>
+    </div>
+    
+    <a href="home.html">
+    <button class="home-button-join">Thank you</button>
+    </a>
     
 </body>
 </html>
