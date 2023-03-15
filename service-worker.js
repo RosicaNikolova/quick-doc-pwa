@@ -5,34 +5,10 @@ const assets = [
     '/',
     '/index.html',
     '/fallback.html',
-    // '/article.html',
-    // '/finish.html',
-    // '/home.html',
-    // '/inqueue.html',
     '/js/index.js',
-    // '/js/article-list.js',
-    // '/js/finish.js',
-    // '/js/timer.js',
-     '/js/install-sw.js',
-    // '/css/article.css',
-    // '/css/finish.css',
-    // '/css/home.css',
-     '/css/index.css',
-    // '/css/inqueue.css',
-    // '/images/article1.png',
-    // '/images/article2.png',
-    // '/images/article3.png',
-    // '/images/article4.png',
-    // '/images/article5.png',
-    // '/images/back-icon.svg',
-    // '/images/background1.png',
-    // '/images/doctor.jpg',
-    // '/images/face-frown-regular.svg',
-    // '/images/user-doctor-solid.svg',
-    // '/images/pexels-cottonbro-studio-5079274.jpg',
-    // 'article.json'
+    '/js/install-sw.js',
+    '/css/index.css'
 ];
-//self - refers to the service worker itself
 
   //install service worker
   self.addEventListener("install", installing => {
