@@ -4,8 +4,8 @@ const timer = document.querySelector('.timer');
 
 //input
 let hr = 0;
-let min = 0;
-let sec = 3;
+let min = 1;
+let sec = 0;
 
 let hours = hr * 36000000;
 let minutes = min * 60000;
