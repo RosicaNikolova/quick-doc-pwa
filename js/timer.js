@@ -15,8 +15,13 @@ let startTime  = Date.now();
 let futureTime = startTime + setTime;
 let timerLoop = setInterval(countDownTimer);
 countDownTimer();
+var audio = new Audio("./notification.mp3");
 
 function countDownTimer() {
+
+      Notification.requestPermission().then((perm) => {
+      });
+
     let currentTime = Date.now();
     let remainingTime = futureTime - currentTime;
     const angle = (remainingTime / setTime) * 360;
@@ -72,6 +77,15 @@ function countDownTimer() {
             </div>
         </div>
         `;
+        
+        notification = new Notification("Time is up!", {
+          body: "Estimated time ran out.",
+          icon: "./images/user-doctor-solid.svg",
+          vibrate: [200, 100, 200],
+        },
+        audio.play()
+        );
+        
     }
 }
 
