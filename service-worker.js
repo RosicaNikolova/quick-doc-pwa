@@ -1,5 +1,5 @@
 
-const staticCacheName = 'site-static';
+const staticCacheName = 'site-static-v1';
 const assets = [
     '/',
     '/index.html',
@@ -45,12 +45,25 @@ const assets = [
   });
   
   //activate service worker
-  self.addEventListener("activate",(activating)=>{	
-    console.log("Service Worker: All systems online, ready to go!");
+  self.addEventListener("activate", activating =>{
+    activating.waitUntil(
+      caches.keys().then(keys => {
+        return Promise.all(keys
+          .filter(key => key !== staticCacheName)
+          .map(key => caches.delete(key))
+          )
+      })
+    );
+    //console.log("Service Worker: All systems online, ready to go!");
   });
   
   //fetch html pages. css files and so on
-  self.addEventListener("fetch",(fetching)=>{   
+  self.addEventListener("fetch", fetching => {
+    fetching.respondWith(
+      caches.match(fetching.request).then(cacheRes => {
+        return cacheRes || fetch(fetching.request);
+      })
+    );
     //console.log("Service Worker: User threw a ball, I need to fetch it!", fetching);
   });
   
