@@ -11,8 +11,9 @@
     console.log("Service Worker: All systems online, ready to go!");
   });
   
+  //fetch html pages. css files and so on
   self.addEventListener("fetch",(fetching)=>{   
-    console.log("Service Worker: User threw a ball, I need to fetch it!");
+    console.log("Service Worker: User threw a ball, I need to fetch it!", fetching);
   });
   
   self.addEventListener("push",(pushing)=>{
